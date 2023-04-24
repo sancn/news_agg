@@ -1,0 +1,12 @@
+{% extends 'news/base.html' %}
+{% block content %}
+
+{% for samachar in samachars %}
+
+<div>
+    <a href="{{ samachar.news_link }}"><h1>{{ samachar.title }}</h1></a>
+    <img src="{{ samachar.image_link }}" alt="{{ samachar.title }}">
+    <p><a href="{{ samachar.news_link }}"></a></p>
+</div>
+{% endfor %}
+{% endblock %}
